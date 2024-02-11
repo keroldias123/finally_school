@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/logo.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/student/css/main.css">
+    <link rel="stylesheet" href="../assets/sala/main.css">
+    <title>complexo escolar emanuel kutolola-student</title>
+   
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a href="../index.html" class="navbar-brand d-flex align-items-center">
+                <img src="../assets/img/logo.jpeg" alt="Company Logo" width="30" height="30">
+                <span>Kutolola</span>
+            </a>
+           <!-- Add Student Dropdown Menu -->
+           <ul class="navbar-nav ml-auto ">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #fff; font-weight: bolder;">
+                  Menu
+                </a>
+                <ul class="dropdown-menu" style="text-align: center;">
+                  <li><a class="dropdown-item" href="../contas/contas.html">contas</a></li>
+                  <li><a class="dropdown-item" href="../Departamentos/departamento.html">Departamentos</a></li>
+                  <li class="nav-item dropend">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      calendario
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../calendarios/actividades.html">Actividades</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="../calendarios/semana_disciplina.html">Disciplinas</a></li>
+                     
+                    </ul>
+                  </li>
+                  <li class="nav-item dropend">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Pautas
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Pauta Geral</a></li>
+                      <li><a class="dropdown-item" href="#">Trimestral</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>   
+                  </li>
+                  <li><a class="dropdown-item" href="../Boletins/boletins.html">Boletins</a></li>
+                  <li><a class="dropdown-item" href="../Student/student.html">Estudantes</a></li>
+                  <li class="nav-item dropend">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Funcionarios
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../Funcionarios/professores.html">Professores</a></li>
+                      <li><a class="dropdown-item" href="../Funcionarios/segurança.html">Seguranças</a></li>
+                      <li><a class="dropdown-item" href="../Funcionarios/motorista.html">motorista Transportes</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="../Funcionarios/limpeza.html">Limpezas</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="../classes/classe.html">Classes</a></li>
+                  <li><a class="dropdown-item" href="../turmas/turmas.html">Turmas</a></li>
+                  <li><a class="dropdown-item" href="../disciplinas/disciplinas.html">Disciplinas</a></li>
+                  <li><a class="dropdown-item" href="../cursos/curso.html">cursos</a></li>
+                  <li><a class="dropdown-item" href="../Transportos/transportes.html">Transportes</a></li>
+                  <li><a class="dropdown-item" href="salas.html">Salas</a></li>
+                  <li class="nav-item dropend">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Desportos
+                    </a>
+                    <ul class="dropdown-menu">
+                     
+                      <li><a class="dropdown-item" href="../Desportos/desportos.html">Desporto</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="../Desportos/participantes.html">Participantes</a></li>
+                     
+                    </ul>
+                  </li>
+
+                </ul>
+            </li>
+        </ul>
+
+
+            <form class="d-flex me-auto">
+                <input class="form-control" type="search" placeholder="Search students" aria-label="Search">
+               
+            </form>
+
+
+
+            <div class="profile d-flex align-items-center">
+               
+                <button class="btn  border-0 " style="color: #fff; font-weight: bold; font-size: 16px; " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://placekitten.com/30/30"  alt="User Profile" width="30" height="30">   Kerol Dias
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" >
+                   
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+    <div class="content mt-5">
+        <div class="btn-group " style="padding-left: 12PX;">
+            <button type="button" class="btn border-0" style="background-color: #ffe607; color: #fff; font-weight: bolder;" data-bs-toggle="modal" data-bs-target="#addStudentModal"><i class="bi bi-plus-circle-fill"></i>Add professor</button>
+            <button type="button" onclick="toggleView()" class="btn border-0" style="background-color: #ffe607; color: #fff; font-weight: bolder;"><i class="bi bi-file-earmark-pdf-fill"></i>Card profile</button>
+            <button type="button" class="btn border-0" style="background-color: #ffe607; color: #fff; font-weight: bolder;"><i class="bi bi-file-earmark-pdf-fill"></i>PDF</button>
+        </div>
+
+    <div id="cardView" class="table-container">
+      
+   <!-- Table structure as before -->
+   <table class="table table-striped table-hover mt-3">
+    <thead class="border-top">
+        <tr style="text-align: center;">
+            <th scope="col">#</th>
+            <th scope="col">imaguem</th>
+            <th scope="col">Nome</th>
+            <th scope="col">data de nascimento</th>
+            <th scope="col">BI</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Endereço</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Disciplina Leciona</th>
+            <th scope="col">Qualificação Acadêmicos</th>
+            <th scope="col">Experiência Profissional</th>
+            <th scope="col">curso adicional ou certificado</th>
+            <th scope="col">Statu de Emprego</th>
+            <th scope="col">Actividades extracurriculares</th>
+            <th scope="col">Feedback dos Estudantes</th>
+            <th scope="col">data de contrato</th>
+            <th scope="col">Operation</th>
+        </tr>
+    </thead>
+    <tbody id="studentTableBody">
+        <!-- Student rows will be dynamically added here -->
+    </tbody>
+</table>
+
+<!-- Pagination as before -->
+<nav aria-label="...">
+    <ul class="pagination">
+        <li class="page-item disabled">
+            <span class="page-link">Previous</span>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active" aria-current="page">
+            <span class="page-link">2</span>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+        </li>
+    </ul>
+</nav>
+</div>
+         
+    </div>
+
+
+    <div id="tableView" class="card  hidden row card-container">
+      <div class="row card-container" id="studentCardContainer"></div>
+    </div>
+    <!-- Adicione isso onde deseja exibir o perfil do estudante -->
+  
+<div id="profileView" class="card hidden"></div>
+
+    <!-- Add Student Modal -->
+    <div class="modal fade" id="addStudentModal" tabindex="-1" aria-labelledby="addStudentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addStudentModalLabel">Add New Professores</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addStudentForm">
+                        <div class="mb-3">
+                            <label for="newStudentName" class="form-label">Imaguem:</label>
+                            <input type="file" class="form-control" id="newStudentName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentName" class="form-label">Name:</label>
+                            <input type="text" class="form-control" id="newStudentName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentDOB" class="form-label">data nascimento:</label>
+                            <input type="date" class="form-control" id="newStudentDOB" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentName" class="form-label">BI:</label>
+                            <input type="text" class="form-control" id="newStudentName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentDOB" class="form-label">Genero:</label>
+                            <select name="" class="form-control" id="newStudentDOB">
+                                <option value="">Masculino</option>
+                                <option value="">Femenino</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentName" class="form-label">Endereço:</label>
+                            <textarea name="" class="form-control" id="newStudentName" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentName" class="form-label">Telefone:</label>
+                            <input type="tel" class="form-control" id="newStudentName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentName" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="newStudentName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentName" class="form-label">Disciplina Leciona:</label>
+                            <select name="" id="" class="form-control" id="newStudentDOB" required>
+                              <option value="">Escolha a sua opção</option>
+                             </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentName" class="form-label">Qualificação academica:</label>
+                            <input type="text" class="form-control" id="newStudentName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentName" class="form-label">Experiência Professional:</label>
+                            <input type="text" class="form-control" id="newStudentName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentName" class="form-label">curso adicional ou certificado</label>
+                            <input type="text" class="form-control" id="newStudentName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentName" class="form-label">Statu de emprego:</label>
+                            <input type="text" class="form-control" id="newStudentName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentName" class="form-label">Actividades extracurriculares:</label>
+                            <select name="" id="" class="form-control" id="newStudentDOB" required>
+                                <option value="">Escolha a sua opção</option>
+                               </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newStudentName" class="form-label">Name:</label>
+                            <select name="" id="" class="form-control" id="newStudentDOB" required>
+                                <option value="">Escolha a sua opção</option>
+                                <option value="">Muito Bom</option>
+                                <option value="">Bom</option>
+                                <option value="">Mau</option>
+                                <option value="">Muito Mau</option>
+                               </select>
+                        </div>
+                        <!-- Add more fields as needed -->
+                        <button type="submit" class="btn btn-primary">Add Professores</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Bootstrap JS and Popper.js (required for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+        <!-- Add this script after the existing scripts -->
+    <script src="../assets/sala/js/altertable.js"></script>
+<script src="../assets/sala/js/crudjs.js"></script>
+
+
+
+  
+</body>
+</html>
